@@ -1,0 +1,7 @@
+{
+  "{{chrome}}.manifest_version": 3,
+  "{{firefox}}.manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "src/newtab.html"
+  }
+}
