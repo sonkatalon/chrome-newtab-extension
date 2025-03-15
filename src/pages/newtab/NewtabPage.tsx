@@ -5,6 +5,7 @@ import "@fontsource/inter/700.css";
 import { theme } from "@katalon-studio/katalon-ui";
 import { CssBaseline, Stack, ThemeProvider } from "@mui/material";
 import { JiraTicketButton } from "./JiraTicketButton";
+import { SourceLink } from "./SourceLink";
 
 export const NewtabPage = () => {
   return (
@@ -12,6 +13,7 @@ export const NewtabPage = () => {
       <CssBaseline />
       <Stack spacing={2} sx={{ m: 2 }}>
         <JiraTicketButton />
+        <SourceLink />
       </Stack>
     </ThemeProvider>
   );
