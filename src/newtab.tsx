@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Newtab } from "./pages/Newtab";
+import { NewtabPage } from "./pages/newtab";
 
 ReactDOM.createRoot(document.body).render(
   <React.StrictMode>
-    <Newtab />
+    <NewtabPage />
   </React.StrictMode>
 );
