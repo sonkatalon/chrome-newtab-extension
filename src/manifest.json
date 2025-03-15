@@ -3,5 +3,6 @@
   "{{firefox}}.manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "src/newtab.html"
-  }
+  },
+  "permissions": ["bookmarks", "favicon"]
 }
