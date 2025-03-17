@@ -26,8 +26,6 @@ export const BookmarkBar = () => {
       if (item.children && item.children.length > 0) {
         setAnchorEl(event.currentTarget);
         setActiveItem(item);
-      } else if (item.url) {
-        window.location.href = item.url;
       }
     }
   );
@@ -42,6 +40,8 @@ export const BookmarkBar = () => {
       <Box sx={{ overflowX: "auto", whiteSpace: "nowrap" }}>
         {items.map((item) => (
           <SquareButton
+            component={"a"}
+            href={item.url}
             key={item.id}
             onClick={(e) => handleClick(e, item)}
             startIcon={<Favicon item={item} />}
@@ -53,6 +53,9 @@ export const BookmarkBar = () => {
       <Menu anchorEl={anchorEl} onClose={handleClose} open={open}>
         {activeItem?.children?.map((childItem) => (
           <MenuItem
+            component={"a"}
+            // @ts-expect-error bad type inference
+            href={childItem.url}
             key={childItem.id}
             leadingElement={<Favicon item={childItem} />}
             onClick={(e) => handleClick(e, childItem)}
